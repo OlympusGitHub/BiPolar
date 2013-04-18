@@ -1,0 +1,19 @@
+1. Use Excel to view Clinical Studies spreadsheet
+2. Save As for each tab in a dated folder, e.g., 011112, the following CSV files:
+	index_by_author.csv
+	outcome.csv
+	procedure.csv
+	product_line.csv
+	
+3. Copy dated folder to 'Dropbox/_CreativeCircle/Project 2' folder
+
+4. Run the following commands on the iMac:
+cd '/Users/macuser/Dropbox/_CreativeCircle/Project 2/<dated folder>'
+cp *.csv /Users/macuser/Documents/gyrus2/Gyrus2
+cd /Users/macuser/Documents/gyrus2/Gyrus2
+./gyrus2convert < index_by_author.csv > index_by_author.txt
+./gyrus2convert < outcome.csv > outcome.txt
+./gyrus2convert < procedure.csv > procedure.txt
+./gyrus2convert < product_line.csv > product_line.txt
+
+5. For each .txt file :1,$s/<BR>,$/,/ & add comma to end of last line

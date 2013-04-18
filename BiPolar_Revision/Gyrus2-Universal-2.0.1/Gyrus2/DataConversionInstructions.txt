@@ -1,0 +1,59 @@
+------------------------------------
+Old Instructions using PC & then Mac
+------------------------------------
+
+1. Use Excel to view Clinical Studies spreadsheet
+2. Save As for each tab in a dated folder, e.g., 011112, the following CSV files:
+	index_by_author.csv
+	outcome.csv
+	procedure.csv
+	product_line.csv
+	
+3. Copy dated folder to 'Dropbox/_CreativeCircle/Project 2' folder
+
+4. Run the following commands on the iMac:
+cd '/Users/macuser/Dropbox/_CreativeCircle/Project 2/<dated folder>'
+cp *.csv /Users/macuser/Documents/gyrus2/Gyrus2
+cd /Users/macuser/Documents/gyrus2/Gyrus2
+./gyrus2convert < index_by_author.csv > index_by_author.txt
+./gyrus2convert < outcome.csv > outcome.txt
+./gyrus2convert < procedure.csv > procedure.txt
+./gyrus2convert < product_line.csv > product_line.txt
+
+5. For each .txt file :1,$s/<BR>,$/,/ & add comma to end of last line
+
+-------------------------------------------
+Instructions for Conversion all done on Mac
+-------------------------------------------
+
+1. Place new Excel spreadsheet provided by Olympus in Downloads folder
+
+2. Create folder named by date, e.g., 032513
+
+3. Open Excel spreadsheet
+
+4. For each of the 4 tabs (Outcome, Procedure, Product Line, and Index by Author):
+	a. Select All
+	b. Copy
+	c. Create new workbook
+	d. Paste
+	e. Save as "Windows Comma Separated (csv)"
+		outcome.csv
+		procedure.csv
+		product_line.csv
+		index_by_author.csv
+		
+5. Copy 4 csv files to project in same directory overwriting previous versions
+
+6. Run the following commands to convert to txt files which will be read by app:
+./gyrus2convert < index_by_author.csv > index_by_author.txt
+./gyrus2convert < outcome.csv > outcome.txt
+./gyrus2convert < procedure.csv > procedure.txt
+./gyrus2convert < product_line.csv > product_line.txt
+
+7. For each .txt file :1,$s/<BR>,$/,/ & add comma to end of last line
+
+8. Check for "Fagerstrom" where "o" is replaced with "^"
+
+9. Manually re-order new items into old for each file.
+
